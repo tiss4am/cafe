@@ -389,7 +389,16 @@ em{font-style:italic;color:var(--terracotta-600);font-weight:500;}
   align-items:center;
 }
 .about-media{position:relative;}
+.about-arch{
+  position:absolute;
+  left:-8%;right:-8%;top:-9%;
+  height:34%;
+  fill:var(--gold-050);
+  z-index:0;
+}
 .photo-frame{
+  position:relative;
+  z-index:1;
   aspect-ratio:4/5;
   border-radius:var(--radius-lg);
   box-shadow:var(--shadow-lg);
@@ -472,23 +481,42 @@ em{font-style:italic;color:var(--terracotta-600);font-weight:500;}
 .menu-card-top .price{color:var(--gold-500);font-weight:600;font-family:var(--font-mono);font-size:.92rem;white-space:nowrap;}
 .menu-card-body p{color:rgba(245,237,225,.65);font-size:.88rem;}
 
-/* per-item placeholder tints for variety */
-.ph-espresso{background:linear-gradient(135deg,#3d2718,#20130c);}
-.ph-latte{background:linear-gradient(135deg,#6b4530,#3d2718);}
-.ph-cappuccino{background:linear-gradient(135deg,#5b4a3f,#2b1b12);}
-.ph-chocolat{background:linear-gradient(135deg,#4a2e1f,#20130c);}
-.ph-icelatte{background:linear-gradient(135deg,#8a6a52,#4a2e1f);}
-.ph-coldbrew{background:linear-gradient(135deg,#3d2718,#6b4530);}
-.ph-matcha{background:linear-gradient(135deg,#6b7a5e,#3d4535);}
-.ph-limonade{background:linear-gradient(135deg,#c1613b,#6b4530);}
-.ph-croissant{background:linear-gradient(135deg,#a8763f,#6b4530);}
-.ph-cookie{background:linear-gradient(135deg,#4a2e1f,#2b1b12);}
-.ph-cheesecake{background:linear-gradient(135deg,#c1613b,#3d2718);}
-.ph-carrotcake{background:linear-gradient(135deg,#a8763f,#4a2e1f);}
-.ph-avocado{background:linear-gradient(135deg,#6b7a5e,#4a5540);}
-.ph-club{background:linear-gradient(135deg,#6b4530,#3d2718);}
-.ph-bagel{background:linear-gradient(135deg,#c1613b,#8a6a52);}
-.ph-salade{background:linear-gradient(135deg,#6b7a5e,#3d2718);}
+/* per-item placeholder tints — évoquent la vraie carte SH COFFEE */
+/* Salé — toasts dorés, fromage fondu, charcuterie */
+.ph-toast-italien{background:linear-gradient(135deg,#b98a4a,#6b4530);}
+.ph-toast-chicken{background:linear-gradient(135deg,#c79a52,#7a5030);}
+.ph-toast-savoyard{background:linear-gradient(135deg,#d1a851,#8a5a2e);}
+.ph-toast-saumon{background:linear-gradient(135deg,#e8a98c,#b06a4a);}
+.ph-milano{background:linear-gradient(135deg,#8a9a5e,#5c4530);}
+.ph-toast-pesto{background:linear-gradient(135deg,#93a35e,#6b4d30);}
+.ph-toast-egg{background:linear-gradient(135deg,#e3c878,#a67f42);}
+.ph-grill-cheese{background:linear-gradient(135deg,#d9ae55,#96632e);}
+.ph-brioche-croque{background:linear-gradient(135deg,#d3a35e,#8a5a30);}
+
+/* Sucrée — brioches gourmandes */
+.ph-brioche-pommie{background:linear-gradient(135deg,#c98a3f,#7a4a20);}
+.ph-brioche-pistacho{background:linear-gradient(135deg,#a8b06a,#6b7a45);}
+.ph-brioche-crazy{background:linear-gradient(135deg,#d4a24a,#8a5a20);}
+.ph-brioche-dubai{background:linear-gradient(135deg,#e0838f,#c99a4a);}
+.ph-cookie-dought{background:linear-gradient(135deg,#8a5a3a,#4a2e1c);}
+.ph-brioche-tiramisu{background:linear-gradient(135deg,#6b4a30,#3a2418);}
+
+/* Matcha Signature — matcha + fruits */
+.ph-matcha-strawberry{background:linear-gradient(160deg,#e0838f 0%,#8a9a5e 60%);}
+.ph-matcha-mangue{background:linear-gradient(160deg,#e0a23f 0%,#8a9a5e 60%);}
+.ph-matcha-brulee{background:linear-gradient(160deg,#d4a24a 0%,#7a8a52 60%);}
+
+/* Desserts — gaufres & pancakes dorés */
+.ph-cup{background:linear-gradient(135deg,#d9ae55,#96632e);}
+.ph-bowl{background:linear-gradient(135deg,#dcb262,#97652f);}
+
+/* Drinks — boissons signature colorées */
+.ph-violetta{background:linear-gradient(135deg,#9a7fc9,#5c4485);}
+.ph-passiona{background:linear-gradient(135deg,#f0b23a,#d9761f);}
+.ph-passion-paradise{background:linear-gradient(135deg,#f2836a,#e0455a);}
+.ph-dragon-sunset{background:linear-gradient(160deg,#f2b23a 0%,#e0455a 60%,#a8283f 100%);}
+.ph-mojito{background:linear-gradient(135deg,#a8cf6a,#5c8a3a);}
+.ph-lita{background:linear-gradient(135deg,#e0556a,#a8283f);}
 
 /* ===================== GALLERY ===================== */
 .gallery{padding:120px 0 0;background:var(--cream-050);}
