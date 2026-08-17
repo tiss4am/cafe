@@ -134,7 +134,7 @@
      MENU TABS
   ========================================================= */
   var tabs = document.querySelectorAll('.menu-tab');
-  var panels = document.querySelectorAll('.menu-grid');
+  var panels = document.querySelectorAll('.menu-panels > [data-panel]');
   tabs.forEach(function (tab) {
     tab.addEventListener('click', function () {
       var cat = tab.getAttribute('data-cat');
@@ -155,6 +155,29 @@
           });
         }
       });
+    });
+  });
+
+  /* =========================================================
+     MENU HORIZONTAL SCROLL (Drinks)
+  ========================================================= */
+  document.querySelectorAll('.menu-scroll-outer').forEach(function (outer) {
+    var track = outer.querySelector('.menu-scroll-track');
+    var prevBtn = outer.querySelector('.menu-scroll-prev');
+    var nextBtn = outer.querySelector('.menu-scroll-next');
+    if (!track) return;
+
+    function stepWidth() {
+      var card = track.querySelector('.menu-card');
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 20;
+      return card ? card.getBoundingClientRect().width + gap : 260;
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', function () {
+      track.scrollBy({ left: -stepWidth(), behavior: 'smooth' });
+    });
+    if (nextBtn) nextBtn.addEventListener('click', function () {
+      track.scrollBy({ left: stepWidth(), behavior: 'smooth' });
     });
   });
 
