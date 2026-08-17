@@ -22,6 +22,11 @@
   --gold-600:#96835d;
   --gold-050:#f2ecdb;
 
+  /* accents saisonniers — été / printemps */
+  --coral-500:#e2637a;
+  --matcha-500:#8fae5a;
+  --sun-500:#e8b23a;
+
   --ink:#1f1815;
   --ink-soft:#5c5551;
   --white:#ffffff;
@@ -199,6 +204,8 @@ em{font-style:italic;color:var(--terracotta-600);font-weight:500;}
 }
 .site-header.is-scrolled .logo{color:var(--coffee-900);}
 .logo-mark{display:flex;color:inherit;}
+.logo-mark svg{width:42px;height:42px;display:block;}
+.logo-footer .logo-mark svg{width:36px;height:36px;}
 .logo-text{
   font-family:var(--font-display);
   font-size:1.25rem;
@@ -206,6 +213,13 @@ em{font-style:italic;color:var(--terracotta-600);font-weight:500;}
   letter-spacing:.02em;
 }
 .logo-text em{color:var(--terracotta-500);font-style:normal;}
+
+.hero-seal{
+  display:inline-flex;
+  color:var(--gold-500);
+  margin-bottom:28px;
+}
+.hero-seal svg{width:104px;height:104px;display:block;}
 
 .main-nav ul{display:flex;gap:36px;}
 .main-nav a{
@@ -280,7 +294,10 @@ em{font-style:italic;color:var(--terracotta-600);font-weight:500;}
 .hero-gradient::after{
   content:'';
   position:absolute;inset:0;
-  background:linear-gradient(100deg, rgba(207,69,33,.14) 0%, transparent 32%);
+  background:
+    radial-gradient(ellipse 58% 50% at 10% 6%, rgba(226,99,122,.22), transparent 62%),
+    radial-gradient(ellipse 52% 46% at 94% 14%, rgba(232,178,58,.18), transparent 60%),
+    radial-gradient(ellipse 62% 55% at 46% 104%, rgba(143,174,90,.20), transparent 62%);
 }
 .hero-texture{
   position:absolute;inset:0;
@@ -763,11 +780,12 @@ em{font-style:italic;color:var(--terracotta-600);font-weight:500;}
 }
 .reveal.is-visible{opacity:1;transform:translateY(0);}
 .hero-content .reveal{transition-delay:calc(var(--d,0) * 1ms);}
-.hero-content .eyebrow.reveal{--d:0;}
-.hero-content .hero-title.reveal{--d:80;}
-.hero-content .hero-subtitle.reveal{--d:160;}
-.hero-content .hero-actions.reveal{--d:240;}
-.hero-content .hero-meta.reveal{--d:320;}
+.hero-content .hero-seal.reveal{--d:0;}
+.hero-content .eyebrow.reveal{--d:80;}
+.hero-content .hero-title.reveal{--d:160;}
+.hero-content .hero-subtitle.reveal{--d:240;}
+.hero-content .hero-actions.reveal{--d:320;}
+.hero-content .hero-meta.reveal{--d:400;}
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width:1080px){
@@ -808,6 +826,7 @@ em{font-style:italic;color:var(--terracotta-600);font-weight:500;}
 }
 
 @media (max-width:760px){
+  .hero-seal svg{width:76px;height:76px;}
   .container{padding-inline:20px;}
   .about,.menu,.gallery,.reviews,.location,.order{padding:80px 0;}
   .gallery{padding-top:80px;}
